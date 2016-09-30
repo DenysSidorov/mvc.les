@@ -1,47 +1,73 @@
--- --------------------------------------------------------
--- Хост:                         127.0.0.1
--- Версия сервера:               5.5.41-log - MySQL Community Server (GPL)
--- ОС Сервера:                   Win32
--- HeidiSQL Версия:              9.1.0.4867
--- --------------------------------------------------------
+-- phpMyAdmin SQL Dump
+-- version 4.4.15.7
+-- http://www.phpmyadmin.net
+--
+-- Хост: 127.0.0.1:3306
+-- Время создания: Сен 30 2016 г., 19:35
+-- Версия сервера: 5.6.31
+-- Версия PHP: 5.6.23
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Дамп структуры базы данных php_base
-CREATE DATABASE IF NOT EXISTS `php_base` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `php_base`;
+--
+-- База данных: `php_base`
+--
 
+-- --------------------------------------------------------
 
--- Дамп структуры для таблица php_base.news
+--
+-- Структура таблицы `news`
+--
+
 CREATE TABLE IF NOT EXISTS `news` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `short_content` text NOT NULL,
   `content` text NOT NULL,
   `author_name` varchar(255) NOT NULL,
   `preview` varchar(255) NOT NULL,
-  `type` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
+  `type` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы php_base.news: ~10 rows (приблизительно)
-/*!40000 ALTER TABLE `news` DISABLE KEYS */;
+--
+-- Дамп данных таблицы `news`
+--
+
 INSERT INTO `news` (`id`, `title`, `date`, `short_content`, `content`, `author_name`, `preview`, `type`) VALUES
-	(1, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '2016-05-12 13:05:04', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', 'TopicAuthor', 'images/2.png', 'NewsPublication'),
-	(2, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '2016-05-12 00:00:00', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', 'TopicAuthor', 'images/2.png', 'NewsPublication'),
-	(3, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '2016-05-12 00:00:00', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', 'TopicAuthor', 'images/2.png', 'NewsPublication'),
-	(4, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '2016-05-12 00:00:00', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', 'TopicAuthor', 'images/2.png', 'NewsPublication'),
-	(5, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '2017-05-12 00:00:00', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', 'TopicAuthor', 'images/2.png', 'NewsPublication'),
-	(6, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '2016-05-12 00:00:05', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', 'TopicAuthor', 'images/2.png', 'NewsPublication'),
-	(7, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '2016-05-12 00:00:00', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', 'TopicAuthor', 'images/2.png', 'NewsPublication'),
-	(8, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '2016-05-12 00:00:00', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', 'TopicAuthor', 'images/2.png', 'NewsPublication'),
-	(9, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '2016-05-12 00:00:00', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', 'TopicAuthor', 'images/2.png', 'NewsPublication'),
-	(10, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', '2016-03-12 00:00:00', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', '				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ea distinctio unde, tenetur explicabo dolorem ab aut optio, amet nihil fugit praesentium. Quia, numquam ut deserunt nemo, quae dicta dolores!', 'TopicAuthor', 'images/2.png', 'NewsPublication');
-/*!40000 ALTER TABLE `news` ENABLE KEYS */;
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+(1, 'Средняя стоимость гортензии составляет около 6,5 долларов за один цветок.', '2016-05-12 10:05:04', ' Гортензия — цветок, растущий в Азии, а также в Северной и Южной Америке. Название «гортензия» было дано в честь принцессы Гортензии — сестры принца Священной Римской империи Карла Генриха Нассау-Зигена. У большинства видов гортензии цветочные головки содержат два типа цветков: мелкие плодущие (фертильные) цветки в середине и крупные бесплодные (стерильные) цветки по краям. Средняя стоимость гортензии составляет около 6,5 долларов за один цветок.', ' Гортензия — цветок, растущий в Азии, а также в Северной и Южной Америке. Название «гортензия» было дано в честь принцессы Гортензии — сестры принца Священной Римской империи Карла Генриха Нассау-Зигена. У большинства видов гортензии цветочные головки содержат два типа цветков: мелкие плодущие (фертильные) цветки в середине и крупные бесплодные (стерильные) цветки по краям. Средняя стоимость гортензии составляет около 6,5 долларов за один цветок.', 'TopicAuthor', 'images/3.jpg', 'NewsPublication'),
+(2, 'В мире осталось только два представителя этого цветка.', '2016-05-11 21:00:00', 'Цветок Миддлемиста красного, растет в Великобритании, Новой Зеландии. Его можно назвать бесценным, ведь его цена не установлена — Миддлемист просто невозможно купить. В мире осталось только два представителя этого цветка — он из них растет в Новой Зеландии, а второй уникальный экземпляр — в теплице в Великобритании.', 'Цветок Миддлемиста красного, растет в Великобритании, Новой Зеландии. Его можно назвать бесценным, ведь его цена не установлена — Миддлемист просто невозможно купить. В мире осталось только два представителя этого цветка — он из них растет в Новой Зеландии, а второй уникальный экземпляр — в теплице в Великобритании.', 'TopicAuthor', 'images/2.jpg', 'NewsPublication'),
+(3, 'Это явление повело за собой ряд обширных экспериментов, которые проводились в нидерландской организации в 2004 году.', '2016-05-11 21:00:00', 'Талантливый голландец изобрел собственную технологию в мире цветов. Будучи владельцем одной цветочной компании, он выявил новый индивид — радужную розу. Это явление повело за собой ряд обширных экспериментов, которые проводились в нидерландской организации в 2004 году. Оказалось, что радужные цветы создавать — это целое искусство. Для этого требуется обладать навыками по смешиванию красок. Но такой букет заставит радоваться любого человека. Стоимость за один цветок достигает до 10 долларов. Растению присвоено седьмое место в рейтинге редких экземпляров.', 'Талантливый голландец изобрел собственную технологию в мире цветов. Будучи владельцем одной цветочной компании, он выявил новый индивид — радужную розу. Это явление повело за собой ряд обширных экспериментов, которые проводились в нидерландской организации в 2004 году. Оказалось, что радужные цветы создавать — это целое искусство. Для этого требуется обладать навыками по смешиванию красок. Но такой букет заставит радоваться любого человека. Стоимость за один цветок достигает до 10 долларов. Растению присвоено седьмое место в рейтинге редких экземпляров.', 'TopicAuthor', 'images/4.jpg', 'NewsPublication'),
+(4, ' Среди тюльпанов этот цветок самый дорогой и его стоимость достигает до 20 долларов.', '2016-05-11 21:00:00', 'А если быть точнее, то одному из видов этого прекрасного растения. Его название — Король ночи. Такому наименованию поспособствовал темно-лиловый оттенок. Во время «тюльпанной лихорадки» луковицы этого сорта обменивали на стадо овец или 4 быка, 4 тонны пшеницы или 300 литрам вина. Среди тюльпанов этот цветок самый дорогой и его стоимость достигает до 20 долларов.', 'А если быть точнее, то одному из видов этого прекрасного растения. Его название — Король ночи. Такому наименованию поспособствовал темно-лиловый оттенок. Во время «тюльпанной лихорадки» луковицы этого сорта обменивали на стадо овец или 4 быка, 4 тонны пшеницы или 300 литрам вина. Среди тюльпанов этот цветок самый дорогой и его стоимость достигает до 20 долларов.', 'TopicAuthor', 'images/5.jpg', 'NewsPublication'),
+(5, ' Растение было названо в честь талантливого французского поэта. Этот сорт роз нравится многим звездам мировой эстрады.', '2017-05-11 21:00:00', 'Именно она считается самой красивой розой в мире. Цветок легко узнать по большому бутону кремового цвета. Его в народе называют райской розой, благодаря очаровательному внешнему виду. Растение было названо в честь талантливого французского поэта. Этот сорт роз нравится многим звездам мировой эстрады. Одна роза равняется стоимости в 20 долларов.', 'Именно она считается самой красивой розой в мире. Цветок легко узнать по большому бутону кремового цвета. Его в народе называют райской розой, благодаря очаровательному внешнему виду. Растение было названо в честь талантливого французского поэта. Этот сорт роз нравится многим звездам мировой эстрады. Одна роза равняется стоимости в 20 долларов.', 'TopicAuthor', 'images/6.jpg', 'NewsPublication'),
+(6, 'ершалась в Китае и длилась более 8 лет. Увидеть этот цветок считается настоящим счастьем. Это очень редкий вид и цветет он один раз в пять лет.', '2016-05-11 21:00:05', 'Лидером среди изысканных цветов мира является Shenzhen Nongke. Он также является сортом экзотического растения — орхидеи. Такой вид был выведен искусственно командой селекционеров. Процедура совершалась в Китае и длилась более 8 лет. Увидеть этот цветок считается настоящим счастьем. Это очень редкий вид и цветет он один раз в пять лет. Для его выращивания следует соблюдать очень трепетные условия. Его уход осуществляет одновременно несколько специалистов. Это растение относится и к самым элегантным. Оно дарится только по самому особому случаю. В 2005 году на аукционе за Shenzhen Nongke один из участников заплатил 202 000 долларов. В связи с этим цветок был признан самым дорогим растением в мире.', 'Лидером среди изысканных цветов мира является Shenzhen Nongke. Он также является сортом экзотического растения — орхидеи. Такой вид был выведен искусственно командой селекционеров. Процедура совершалась в Китае и длилась более 8 лет. Увидеть этот цветок считается настоящим счастьем. Это очень редкий вид и цветет он один раз в пять лет. Для его выращивания следует соблюдать очень трепетные условия. Его уход осуществляет одновременно несколько специалистов. Это растение относится и к самым элегантным. Оно дарится только по самому особому случаю. В 2005 году на аукционе за Shenzhen Nongke один из участников заплатил 202 000 долларов. В связи с этим цветок был признан самым дорогим растением в мире.', 'TopicAuthor', 'images/7.jpg', 'NewsPublication');
+
+--
+-- Индексы сохранённых таблиц
+--
+
+--
+-- Индексы таблицы `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
